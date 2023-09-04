@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>loja pesca</title>
+    <title>Minha Pesca l Produtos Incríveis para Pesca</title>
 <style>
 font-face {
     font-family: Roboto;
@@ -14,15 +14,18 @@ font-face {
 
 </style>
 </head>
-<body>
-    <script type="text/javascript">
 
-        $.getJSON( "https://myip.wtf/json", function(localizacao) {
-          var localclient = localizacao['YourFuckingLocation'];
-          var regiaoclient = localclient.replace(", Brazil", "");
-          $("#client_name_end").html("Frete grátis para <b><i> " + regiaoclient + " </i></b> e Região");
-        });
+<script type="text/javascript">
+    $.getJSON( "https://myip.wtf/json", function(localizacao) {
+      var localcliente = localizacao['YourFuckingLocation'];
+      var regiaocliente = localcliente.replace(", Brazil", "");
+    //   $("#client_name_end").html
+    ("Frete grátis para <b><i> " + regiaocliente + " </i></b> e Região");
+  });
+
 </script>
+<body>
+    
     
 
     <img src="BANNER-01.jpeg" alt="BANNER">
