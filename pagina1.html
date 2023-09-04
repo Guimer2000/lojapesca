@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loja pesca</title>
+<style>
+font-face {
+    font-family: Roboto;
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+</style>
+</head>
+<body>
+    <script type="text/javascript">
+
+        $.getJSON( "https://myip.wtf/json", function(localizacao) {
+          var localclient = localizacao['YourFuckingLocation'];
+          var regiaoclient = localclient.replace(", Brazil", "");
+          $("#client_name_end").html("Frete grátis para <b><i> " + regiaoclient + " </i></b> e Região");
+        });
+</script>
+    
+
+    <img src="BANNER-01.jpeg" alt="BANNER">
+
+</body>
+</html>
