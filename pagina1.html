@@ -15,15 +15,21 @@ font-face {
 </style>
 </head>
 
-<script type="text/javascript">
-    $.getJSON( "https://myip.wtf/json", function(localizacao) {
-      var localcliente = localizacao['YourFuckingLocation'];
-      var regiaocliente = localcliente.replace(", Brazil", "");
-    //   $("#client_name_end").html
-    ("Frete grátis para <b><i> " + regiaocliente + " </i></b> e Região");
-  });
+<script>
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+      console.log("Geolocation is not supported by this browser.");
+    }
 
-</script>
+    function showPosition(position) {
+      var latitude = position.coords.latitude;
+      var longitude = position.coords.longitude;
+
+      document.getElementById("latitude").textContent = "Latitude: " + latitude;
+      document.getElementById("longitude").textContent = "Longitude: " + longitude;
+    }
+  </script>
 <body>
     teste fgfdfdghfdg
     
