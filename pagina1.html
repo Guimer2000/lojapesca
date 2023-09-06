@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Pesca l Produtos Incríveis para Pesca</title>
+    <title>Minha Pesca </title>
 <style>
 font-face {
     font-family: Roboto;
@@ -11,28 +11,31 @@ font-face {
     font-style: normal;
     font-display: swap;
 }
+ #divBusca{
+  background-color:#2F4F4F;
+  border:solid 1px;
+  border-radius:15px;
+  width:300px;
+}
 
+#txtBusca{
+  float:left;
+  background-color:transparent;
+  padding-left:5px;
+  font-style:italic;
+  font-size:18px;
+  border:none;
+  height:32px;
+  width:260px;
+}
 </style>
 </head>
 
-<script>
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-      console.log("Geolocation is not supported by this browser.");
-    }
-
-    function showPosition(position) {
-      var latitude = position.coords.latitude;
-      var longitude = position.coords.longitude;
-
-      document.getElementById("latitude").textContent = "Latitude: " + latitude;
-      document.getElementById("longitude").textContent = "Longitude: " + longitude;
-    }
-  </script>
 <body>
-    teste fgfdfdghfdg
-    
+    <div id="divBusca">
+        <input type="text" id="txtBusca" placeholder="Buscar..."/>
+        <img src="images.png" id="btnBusca" alt="Buscar"/>
+      </div>
 
     <img src="BANNER-01.jpeg" alt="BANNER">
 
