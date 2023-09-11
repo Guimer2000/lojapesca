@@ -1,53 +1,170 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
 <head>
-  <title>Exemplo de Exibição do Nome da Cidade</title>
-</head>
-<body>
-  <h1>Localização do Cliente</h1>
-  <p id="city"></p>
-
-  <script>
-    function initMap() {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-      } else {
-        console.log("Geolocation is not supported by this browser.");
-      }
-    }
-
-    function showPosition(position) {
-      var latitude = position.coords.latitude;
-      var longitude = position.coords.longitude;
-
-      var geocoder = new google.maps.Geocoder();
-
-      var latlng = {
-        lat: latitude,
-        lng: longitude
-      };
-
-      geocoder.geocode({ 'location': latlng }, function (results, status) {
-        if (status === 'OK') {
-          if (results[0]) {
-            var city = '';
-            for (var i = 0; i < results[0].address_components.length; i++) {
-              var component = results[0].address_components[i];
-              if (component.types.includes('locality')) {
-                city = component.long_name;
-                break;
-              }
-            }
-            document.getElementById('city').textContent = "Cidade: " + city;
-          } else {
-            console.log('No results found');
-          }
-        } else {
-          console.log('Geocoder failed due to: ' + status);
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Pesca</title>
+    <style>
+        body {
+            width: 84%;
+            margin: 0 auto;
         }
-      });
-    }
-  </script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=SUA_CHAVE_DE_API&callback=initMap" async defer></script>
+
+        .col1 {
+            width: 8.3%;
+        }
+
+        .col2 {
+            width: 16.6%;
+        }
+
+        .col3 {
+            width: 24.9%;
+        }
+
+        .col4 {
+            width: 32.2%;
+        }
+
+        .col5 {
+            width: 41.5%;
+        }
+
+        .col6 {
+            width: 49.8%;
+        }
+
+        .col7 {
+            width: 58.1%;
+        }
+
+        .col8 {
+            width: 66.4%;
+        }
+
+        .col9 {
+            width: 74.7%;
+        }
+
+        .col10 {
+            width: 83%;
+        }
+
+        .col11 {
+            width: 91.3%;
+        }
+
+        .col12 {
+            width: 100%;
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        #divBusca {
+            display: flex;
+            align-items: center;
+            border: solid 1px;
+            border-radius: 30px;
+            width: 50%;
+            height: 70px;
+            margin-top: 20px;
+        }
+
+        #txtBusca {
+            float: left;
+            background-color: transparent;
+            padding-left: 5px;
+            font-style: italic;
+            font-size: 18px;
+            border: none;
+            height: 50%;
+            width: 50%;
+        }
+
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .slideshow-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 30px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 15px;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="logo-removebg-preview.png" class="col1" alt="logo">
+
+    <div id="divBusca">
+        <input type="text" id="txtBusca" placeholder="Buscar..." />
+        <img src="lupa4 (1).png" alt="Buscar" />
+    </div>
+
+    <div class="slideshow-container">
+        <img class="slide" src="molineti.jpg" alt="Imagem 1">
+        <img class="slide" src="molinete melhor.jpg" alt="Imagem 2">
+        <img class="slide" src="BANNER-01.jpeg" alt="Imagem 3">
+
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var slides = document.getElementsByClassName("slide");
+
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slideIndex++;
+
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+
+            setTimeout(showSlides, 3000); // Altere o tempo de exibição de cada slide aqui (em milissegundos)
+        }
+
+        function changeSlide(n) {
+            slideIndex += n;
+            showSlides();
+        }
+    </script>
 </body>
 </html>
