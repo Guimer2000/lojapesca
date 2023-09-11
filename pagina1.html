@@ -80,13 +80,116 @@ font-face {
   text-align: left;
   margin: 0 auto;
 }
+
+  
+:root {
+  
+  --info_client_locals-background:   ;
+  --info_client_locals-color:   ;  
+    
+}   
+    
+.glow-mobile-subnav #nav-global-location-slot {
+      
+  float: left;
+  padding: 0 var(--desktop-container-gutter);
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 1400px;
+  margin: 0 auto;
+  justify-content: center;
+      
+}
+    
+.glow-subnav-template {
+
+  background-image: linear-gradient(310deg, #CE762C, #233E64);;
+  height: 35px;
+  width: 100%;
+  display: flex;
+
+}
+    
+.glow-mobile-subnav #nav-global-location-slot #glow-ingress-block {
+
+  float: left;
+  height: 20px;
+  display: inline-block;
+
+}
+    
+.glow-mobile-subnav #nav-global-location-slot #glow-ingress-block .nav-single-line {
+
+  float: left;
+  clear: both;
+  font-size: 13px;
+  line-height: 20px;
+  color: #ffffff;
+  font-family: inherit;
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-family: var(--heading-font-family);
+
+}
+    
+.glow-mobile-subnav #nav-global-location-slot #nav-packard-glow-loc-icon {
+
+  background-position: -75px -340px;
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin: 0px 7px 0 0px;
+
+}
+    
+.nav-sprite {
+      
+  background: url();
+  background-size: 275px;
+      
+}
+  
+@media (max-width: 768px)  {
+
+
+.glow-mobile-subnav #nav-global-location-slot {        
+
+  width: 100%;
+  padding: 0 var(--mobile-container-gutter);
+      
+}  
+
+.glow-mobile-subnav #nav-global-location-slot #nav-packard-glow-loc-icon {
+
+ 
+margin: 0px 7px 0 0px;
+
+}
+
+}
+    
+
 </style>
 </head>
 
 <body>
- 
+ <script>
+  
+
+  $.getJSON( "https://myip.wtf/json", function(localizacao) {
+				var localclient = localizacao['YourFuckingLocation'];
+				var regiaoclient = localclient.replace(", Brazil", "");
+				$("#client_name_end").html("Frete grátis para <b><i> " + regiaoclient + " </i></b> e Região");
+		    });
+   
+
+ </script>
   <div>
-    col1 class="col1"
+    
     <h1>Seja bem vindo</h1>
 
   </div>
