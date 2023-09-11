@@ -1,107 +1,127 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Pesca </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minha Pesca</title>
 <style>
+  body {
+          width: 84%;
+          margin: 0 auto;
+        }
 
-  
-  body{ 
-    width: 84%;
-    margin: 0 auto;
+  .col1 {
+        width: 8.3%;
+        
+      }
+
+  .col2 {
+      width: 16.6%;
   }
 
-  .col1{
-    width: 8.3%;
-   
-  }
-  .col12{
-    width: 16.6%;
-  }
-  .col3{
-    width: 24.9%;
-  }
-  .col4{
-    width: 32.2%;
-  }
-  .col5{
-    width: 41.5%;
-  }
-  .col6{
-    width: 49.8%;
-  }
-  .col7{
-    width: 58.1%;
-  }
-  .col8{
-    width: 66.4%;
-  }
-  .col9{
-    width: 74.7%;
-  }
-  .col10{
-    width: 83%;
-  }
-  .col11{
-    width: 91.3%;
-  }
-  .col12{
-    width: 100%;
-  }
-font-face {
-    font-family: Roboto;
-    font-weight: 400%;
-    font-style: normal;
-    font-display: swap;
-}
-#divBusca{
-  align-items: center;
-  border:solid 70%;
-  border-radius:30%;
-  width:50%;
-  height: 70%;
-}
+    .col3 {
+        width: 24.9%;
+    }
 
-#txtBusca{
-  float:left;
-  background-color:transparent;
-  padding-left:5%;
-  font-style:italic;
-  font-size:18%;
-  border:none;
-  height:50%;
-  width:50%;
-}
+    .col4 {
+        width: 32.2%;
+    }
 
+    .col5 {
+        width: 41.5%;
+    }
 
+    .col6 {
+        width: 49.8%;
+    }
 
-</style>
+    .col7 {
+        width: 58.1%;
+    }
+
+    .col8 {
+        width: 66.4%;
+    }
+
+    .col9 {
+        width: 74.7%;
+    }
+
+    .col10 {
+        width: 83%;
+    }
+
+    .col11 {
+        width: 91.3%;
+    }
+
+    .col12 {
+        width: 100%;
+      }
+
+    .topo{ 
+      height: 100px;
+      overflow: hidden;
+      background-color: rgb(141, 138, 137);
+      width: 100%;
+    
+    }
+
+    
+    .topo img{
+      height: 100%;
+      display: inline-block
+      
+    }
+
+    .meio {
+      overflow: hidden;
+    }
+
+    .font-face {
+        font-family: Roboto;
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    #divBusca {
+        display: flex;
+        align-items: center;
+        border: solid 1px;
+        border-radius: 10px;
+        width: 100%;
+        height: 50px;
+        margin-top: 20px;
+    }
+
+    #txtBusca {
+        float: left;
+        background-color: transparent;
+        padding-left: 5px;
+        font-style: italic;
+        font-size: 18px;
+        border: none;
+        height: 50%;
+        width: 99%;
+    }
+    </style>
 </head>
 
 <body>
+  <div class="col12 topo"> 
+    <img src="logo-removebg-preview.png"  alt="logo">
+  </div>
 
- <!-- <script>
+  <div class="col12 meio"> 
+    <img src="BANNER-01.jpeg" alt="BANNER"> 
   
+  </div>
+    
+  <div id="divBusca">
+    <input type="text" id="txtBusca" placeholder="Buscar..." />
+    <img src="lupa4 (1).png" alt="Buscar" />
+</div>
 
-  $.getJSON( "https://myip.wtf/json", function(localizacao) {
-				var localclient = localizacao['YourFuckingLocation'];
-				var regiaoclient = localclient.replace(", Brazil", "");
-				$("#client_name_end").html("Frete grátis para <b><i> " + regiaoclient + " </i></b> e Região");
-		    });
-   
-
- </script> -->
-  
-    <img src="logo-removebg-preview.png" class="col1" alt="logo">
-
-    <div id="divBusca">
-        <input type="text" id="txtBusca" placeholder="Buscar..."/>
-        <img src="lupa4 (1).png" alt="Buscar"/>
-      </div>
-
-    <img src="BANNER-01.jpeg" alt="BANNER" class="col12">
-fghfg
 </body>
 </html>
-
