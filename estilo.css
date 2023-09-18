@@ -180,11 +180,48 @@ a {
 }
 .circle-button {
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   background-color: #000;
   color: #fff;
   font-size: 16px;
-  text-align: center;
+  text-align: left;
   cursor: pointer;
+}
+.product {
+  width: 250px;
+  height: 350px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #ccc;
+}
+.product-image {
+  width: 100%;
+  height: 200px;
+}
+.product-info {
+  padding: 10px;
+  color: #fff;
+}
+.product-info h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.product-info p {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #fff;
+}
+.product-info button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+a {
+  color: #fff;
 }
