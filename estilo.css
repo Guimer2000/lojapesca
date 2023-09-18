@@ -1,6 +1,7 @@
 body {
   width: 84%;
   margin: 0 auto;
+  background-color: #000000;
 }
 
 .col1 {
@@ -93,6 +94,7 @@ body {
   border: none;
   height: 50%;
   width: 99%;
+  color:#FFFFFF;
 }
 
 #divBusca img {

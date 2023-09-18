@@ -31,7 +31,10 @@
   document.getElementById("city").innerHTML = city;
   </script>
 
-
+<div id="divBusca">
+  <input type="text" id="txtBusca" placeholder="Buscar...">
+  <img src="lupa4 (1).png" alt="Buscar">
+</div>
 <div class="container">
     <h1>Cadastro e Login</h1>
     <form action="submit.php" method="post">
@@ -44,13 +47,14 @@
   </div>
 <div class="col12 topo">
   <img src="logo-removebg-preview.png"  alt="logo">
+  
 </div>
 <div class="col12 topo"> 
   <ul class="categoria">
-    <li><a href="#">Varas de Pesca</a></li>
-    <li><a href="#">Molinetes</a></li>
-    <li><a href="#">Carretilha</a></li>
-    <li><a href="#">Outros.. </a></li>
+    <li><a href="http://127.0.0.1:5500/varasdepesca.html">Varas de Pesca</a></li>
+    <li><a href="http://127.0.0.1:5500/molinetes.html">Molinetes</a></li>
+    <li><a href="http://127.0.0.1:5500/carretilha.html">Carretilha</a></li>
+    <li><a href="http://127.0.0.1:5500/outros.html">Outros.. </a></li>
   </ul>
 </div>
 <div class="col12 meio">
@@ -58,12 +62,6 @@
     <img class="slide active" src="molineti.jpg">
     <img class="slide" src="molinete melhor.jpg">
     <img class="slide" src="BANNER-01.jpeg">
-  </div>
-  <span id="prev-slide">&lt;</span>
-  <span id="next-slide">&gt;</span>
-  <div id="divBusca">
-    <input type="text" id="txtBusca" placeholder="Buscar...">
-    <img src="lupa4 (1).png" alt="Buscar">
   </div>
   <script>
     var slides = document.querySelectorAll('.slide');
