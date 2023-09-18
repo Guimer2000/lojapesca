@@ -7,6 +7,26 @@
 <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
+
+  <div class="col12 topo"> 
+    <img src="logo-removebg-preview.png"  alt="logo">
+  <div class="slideshow-conteiner">
+    <div class="slide fade">
+      <img src="BANNER-01.jpeg" alt="BANNER">
+    </div> 
+    <div class="slide fade">
+      <img src="molinete melhor.jpg" alt="molinete">
+    </div>
+    <div class="slide fade">
+      <img src="molineti.jpg" alt="">
+    </div>
+  </div>
+  <script src="estilo.css"></script>
+  <div id="divBusca">
+    <input type="text" id="txtBusca" placeholder="Buscar..." />
+    <img src="lupa4 (1).png" alt="Buscar" />
+</div>
+
 <!-- <script>
   function getLocation() {
     if (navigator.geolocation) {
@@ -23,13 +43,11 @@
   }
 </script> -->
 <!-- <p>demo</p> -->
-<script> // Pegue a localização do cliente.
-  var location = navigator.geolocation.getCurrentPosition();
-  // Converta a localização do cliente em uma cidade.
-  var city = location.city;
-  // Exiba a cidade do cliente no site.
-  document.getElementById("city").innerHTML = city;
-  </script>
+
+<span id="address" style="color:#ff0000;">Salvador</span>
+
+<!-- <--INÍCIO DO SCRIPT--> 
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
 
 
 <div class="container">
@@ -67,7 +85,6 @@
     var slides = document.querySelectorAll('.slide');
 var currentSlide = 0;
 var slideInterval = setInterval(nextSlide,2000);
-
 function nextSlide() {
     slides[currentSlide].classList.remove('active');
     slides[currentSlide].classList.add('previous');
