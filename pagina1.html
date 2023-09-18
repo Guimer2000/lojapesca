@@ -4,186 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Minha Pesca</title>
-<style>
-body {
-  width: 84%;
-  margin: 0 auto;
-}
-
-.col1 {
-  width: 8.3%;
-}
-
-.col2 {
-  width: 16.6%;
-}
-
-.col3 {
-  width: 24.9%;
-}
-
-.col4 {
-  width: 32.2%;
-}
-
-.col5 {
-  width: 41.5%;
-}
-
-.col6 {
-  width: 49.8%;
-}
-
-.col7 {
-  width: 58.1%;
-}
-
-.col8 {
-  width: 66.4%;
-}
-
-.col9 {
-  width: 74.7%;
-}
-
-.col10 {
-  width: 83%;
-}
-
-.col11 {
-  width: 91.3%;
-}
-
-.col12 {
-  width: 100%;
-}
-
-.topo{
-  height: 100px;
-  overflow: hidden;
-  background-color: rgb(141, 138, 137);
-  width: 100%;
-}
-
-.topo img{
-  height: 100%;
-  display: inline-block;
-}
-
-.meio {
-  overflow: hidden;
-}
-
-.font-face {
-  font-family: Roboto;
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-#divBusca {
-  display: flex;
-  align-items: center;
-  border: solid 1px;
-  border-radius: 10px;
-  width: 100%;
-  height: 50px;
-  margin-top: 20px;
-}
-
-#txtBusca {
-  float: left;
-  background-color: transparent;
-  padding-left: 5px;
-  font-style: italic;
-  font-size: 18px;
-  border: none;
-  height: 50%;
-  width: 99%;
-}
-
-#divBusca img {
-  height: 100%;
-}
-
-.slideshow {
-  width: 100%;
-  height: 500px;
-  position: relative;
-  overflow: hidden;
-}
-
-.slide {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 100%;
-  top: 0;
-  opacity: 0;
-  transition: transform 2s ease-in-out, opacity 2s ease-in-out;
-}
-
-.slide.active {
-  left: 0;
-  opacity: 1;
-}
-
-.slide.previous {
-  left: -100%;
-  opacity: 0;
-}
-
-.categoria {
-  display: flex;
-  justify-content: space-between;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.categoria li {
-  margin-right: 1em;
-}
-
-.categoria a {
-  display: block;
-  padding: 0.5em 1em;
-  background-color: #ddd;
-  color: #333;
-  text-decoration: none;
-  border-radius: 0.25em;
-}
-
-.categoria a:hover {
-  background-color:#162e33;
-  color: #fff;
-}
-.container {
-  width: 500px;
-  margin: 0 auto;
-}
-h1 {
-  text-align: center;
-}
-form {
-  margin-top: 20px;
-}
-input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-}
-input[type="submit"] {
-  background-color: #000;
-  color: #fff;
-  cursor: pointer;
-}
-a {
-  text-decoration: none;
-  color: #000;
-}
-</style>
+<link rel="stylesheet" href="estilo.css">
 </head>
 <body>
 <!-- <script>
@@ -202,17 +23,15 @@ a {
   }
 </script> -->
 <!-- <p>demo</p> -->
+<script> // Pegue a localização do cliente.
+  var location = navigator.geolocation.getCurrentPosition();
+  // Converta a localização do cliente em uma cidade.
+  var city = location.city;
+  // Exiba a cidade do cliente no site.
+  document.getElementById("city").innerHTML = city;
+  </script>
 
-<span id="address" style="color:#ff0000;">Salvador</span>
 
-<!-- <--INÍCIO DO SCRIPT--> 
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
-
-
-<script>$.get("https://ipinfo.io/json", function(response) { $("#address").html(response.city);
-},"jsonp"); </script> 
-
-<!--FIM DO SCRIPT-->
 <div class="container">
     <h1>Cadastro e Login</h1>
     <form action="submit.php" method="post">
