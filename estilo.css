@@ -216,7 +216,6 @@ a {
 .product-info p {
   font-size: 14px;
   margin-bottom: 5px;
-  color: greenyellow;
 }
 .product-info button {
   background-color: #007bff;
@@ -229,6 +228,9 @@ a {
 }
 .product-info s{
   font-size: 10.5px;
+}
+.p-preco{
+color: greenyellow;
 }
 a{
   color: #fff;
