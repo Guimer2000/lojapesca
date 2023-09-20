@@ -67,7 +67,12 @@ body {
 .meio {
   overflow: hidden;
 }
-
+.header{
+  background-color: rgb(141, 138, 137);
+  height: 53px;
+  overflow: hidden;
+  width: 100%;
+}
 .font-face {
   font-family: Roboto;
   font-weight: 400;
@@ -224,4 +229,10 @@ a {
 }
 a {
   color: #fff;
+}
+.p{
+  color:greenyellow;
+}
+s{
+  font-size: 4px;
 }
