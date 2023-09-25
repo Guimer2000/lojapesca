@@ -66,7 +66,11 @@ body {
 .meio {
   overflow: hidden;
 }
-
+marquee{
+  color: #fff;
+  border: 5px;
+  background: linear-gradient(to right, #000, #bbb9b9);
+}
 .header{
   background-color: rgb(141, 138, 137);
   height: 53px;
@@ -85,10 +89,9 @@ body {
   display: flex;
   align-items: center;
   border: solid 1px;
-  border-radius: 10px;
+  border-radius: 1px;
   width: 100%;
   height: 50px;
-  margin-top: 20px;
   background-color: #ccc;
 }
 
