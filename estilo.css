@@ -1,9 +1,14 @@
 body {
   width: 84%;
   margin: 0 auto;
-  background-color: #2e7cb1;
+  background: linear-gradient(to right, #2e7cb1, #fff);
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  border-radius: 5px;
 }
-
+.login{
+  background: linear-gradient(to right, #2e7cb1, #fff);
+}
 .col1 {
   width: 8.3%;
 }
