@@ -190,7 +190,7 @@ a {
   background-color: #000;
   color: #fff;
   font-size: 16px;
-  text-align: left;
+  text-align:right;
   cursor: pointer;
 }
 .product {
@@ -200,6 +200,7 @@ a {
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 2px 2px 5px #ccc;
+  align-items: center ;
 }
 .product-img {
   width: 100%;
