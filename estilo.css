@@ -31,6 +31,10 @@ body {
 
 .col6 {
   width: 49.8%;
+  background: linear-gradient( to right, green, yellow);
+  height: 100px;
+  overflow: hidden;
+  width: 100%;
 }
 
 .col7 {
