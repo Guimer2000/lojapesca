@@ -286,6 +286,9 @@ a{
 .color{
   background-color: #000;
   border-radius: 5px;
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
 }
 .esquerda{
   position: fixed;
@@ -302,10 +305,6 @@ a{
   background: linear-gradient(to right,#fff, #084581,#b52a2a, #fff);
   color: #fff;
 }
-/* .creditos ul{
-  list-style: none;
-  padding: 0; */
-
 .creditos li{
   display: inline-block;
   margin: 0 10px;
