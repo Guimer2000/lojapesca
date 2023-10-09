@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+th, td {
+  text-align: center;
+  padding: 8px;
+}
+
+th {
+  background-color: #333;
+  color: white;
+  
+}
+tr{
+  background-color: black;
+}
+tr:nth-child(even) {
+  background-color: #6d6767;
+}
+
+tr:hover {
+  background-color: #3ba5d6;
+}
+img {
+  width: 40%;
+
+}
+/* div {
+  background-color: #ffffff ;
+} */
+</style>
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <div id="divBusca">
+    <input type="text" id="txtBusca" placeholder="Buscar...">
+   <a href="#">
+    <img src="lupa4 (1).png" alt="Buscar">
+   </a> 
+  </div>
+  
+  <div class="col12 topo">
+    <div class="topo1 col3">
+      <a href="http://127.0.0.1:5500/index.html"><img src="logo-removebg-preview.png"  alt="logo"></a>
+    </div>
+  
+    <div class="topo2 col9">
+      <a href="http://127.0.0.1:5500/cadastroelogin.html"> 
+        <button class="circle-button">
+          <span>Login</span>
+        </button>
+      </a>
+    </div>
+  </div>
+<div>  
+  <table>
+    <tr>
+      <th>Produto</th>
+      <th id = qtd>Quantidade</th>
+      <th id = preco>Preço</th>
+      <th> Total </th>
+    </tr>
+    <tr>
+      
+      <td><img src="kit.jpeg" alt=""> isca</td>
+      <td id="qtd1"><input type="number"></td>
+      <td id="preco">10,00</td> onchange()
+      <td id="v1"></td>
+    </tr>
+    <tr>
+      <td><img src="molinete melhor.jpg" alt=""> molinete </td>
+      <td><input type="number"></td>
+      <td>250.00</td>
+      <td> 110.00 </td>
+      <!-- <td><button onclick="adicionarAoCarrinho(this.parentNode.parentNode)">Adicionar ao Carrinho</button></td> -->
+    </tr>
+    <tr>
+      <td><img src="shopping.jpeg" alt=""> nome </td>
+      <td><input type="number"></td>
+      <td>100.00</td>
+      <td> 115.00</td>
+    </tr>
+    <tr>
+      <td><img src="carretilha.jpg" alt=""> carretilha</td>
+      <td><input type="number"></td>
+      <td>299.00</td>
+      <td> 250.00</td>
+    </tr>
+  </table>
+</div>
+<script>
+  function calcular()
+    let p1 = parseFloat(document.getElementById("preco1").innerHTML)
+    let q1 = parseInt(document.getElementById("qtd1").value)
+    let v1 = document.getElementById("valor1")
+    v1.innerHTML = p1 * q1
+</script>
+</body>
+</html>

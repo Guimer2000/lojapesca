@@ -31,7 +31,9 @@
         <span>Login</span>
       </button>
     </a>
+    <a href="http://127.0.0.1:5500/carrin_compra.html"><img sorc="carrin.png" alt=""></a>
   </div>
+ 
 </div>
 
 <div class="menu col12">
@@ -131,6 +133,16 @@ function nextSlide() {
   </div>
 </div>
 </div>
+<script>
+  function adicionarAoCarrinho(produto) {
+     let quantidade = parseInt(document.querySelector('input[type="number"]').value);
+     let preco = parseFloat(produto.querySelector('td:nth-child(3)').textContent);
+     let total = quantidade * preco;
+ 
+     produto.querySelector('td:nth-child(4)').textContent = total.toFixed(2);
+     alert("Produto adicionado ao carrinho!");
+  }
+ </script>
 <div class="creditos">
   <ul>
      <h4>Desenvolvido por: </h4>
