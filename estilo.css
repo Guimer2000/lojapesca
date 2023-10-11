@@ -317,3 +317,34 @@ input[type="number"] {
   border-radius: 5px;
   /* animation: alternate; */
 }
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+th, td {
+  text-align: center;
+  padding: 8px;
+}
+
+th {
+  background-color: #333;
+  color: white;
+  
+}
+tr{
+  background-color: rgb(199, 191, 191);
+}
+tr:nth-child(even) {
+  background-color: #6d6767;
+}
+
+tr:hover {
+  background-color: #3ba5d6;
+}
+img {
+  width: 40%;
+
+}
