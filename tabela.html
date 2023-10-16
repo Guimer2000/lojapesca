@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Carrinho de Compras</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #181717;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #a09a9a;
+        }
+
+        tr:nth-child(even) {
+            background-color: #ffffff;
+        }
+
+        input[type="number"] {
+            height: 30px;
+            padding: 5px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Meu Carrinho de Compras</h1>
+    <table>
+        <tr>
+            <th>Produto</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
+            <th>Total</th>
+        </tr>
+        <tr>
+            <td>Camisa</td>
+            <td>R$ 200,00</td>
+            <td><input type="number" id="quantidadeCamisa" value="0" min="0" onchange="calcularTotal('Camisa', 200, 'quantidadeCamisa', 'totalCamisa')"></td>
+            <td><span id="totalCamisa">R$ 0,00</span></td>
+            <td><button onclick="excluirLinha(this)">Excluir</button></td>
+        </tr>
+        <tr>
+            <td>Tênis</td>
+            <td>R$ 400,00</td>
+            <td><input type="number" id="quantidadeTenis" value="0" min="0" onchange="calcularTotal('Tênis', 400, 'quantidadeTenis', 'totalTenis')"></td>
+            <td><span id="totalTenis">R$ 0,00</span></td>
+            <td><button onclick="excluirLinha(this)">Excluir</button></td>
+        </tr>
+        <tr>
+            <td>Meias</td>
+            <td>R$ 35,00</td>
+            <td><input type="number" id="quantidadeMeias" value="0" min="0" onchange="calcularTotal('Meias', 35, 'quantidadeMeias', 'totalMeias')"></td>
+            <td><span id="totalMeias">R$ 0,00</span></td>
+            <td><button onclick="excluirLinha(this)">Excluir</button></td>
+        </tr>
+    </table>
+    
+
+    <p>Valor da sua compra total: <span id="totalGeral">R$ 0,00</span></p>
+
+    <script>
+        function calcularTotal(produto, precoUnitario, inputId, spanId) {
+            var quantidade = parseInt(document.getElementById(inputId).value);
+            var total = quantidade * precoUnitario;
+            document.getElementById(spanId).textContent = 'R$ ' + total.toFixed(2);
+
+            atualizarTotalGeral();
+        }
+
+        function atualizarTotalGeral() {
+            var totalCamisa = parseFloat(document.getElementById('totalCamisa').textContent.replace('R$ ', ''));
+            var totalTenis = parseFloat(document.getElementById('totalTenis').textContent.replace('R$ ', ''));
+            var totalMeias = parseFloat(document.getElementById('totalMeias').textContent.replace('R$ ', ''));
+
+            var totalGeral = totalCamisa + totalTenis + totalMeias;
+            document.getElementById('totalGeral').textContent = 'R$ ' + totalGeral.toFixed(2);
+        }
+    </script>
+    <script>
+        function excluirLinha(botao) {
+            var linha = botao.parentNode.parentNode;
+            var tabela = linha.parentNode;
+             tabela.deleteRow(linha.rowIndex);
+        }
+    </script>
+</body>
+</html>
