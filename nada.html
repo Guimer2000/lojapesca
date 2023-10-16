@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulário</title>
+</head>
+<body>
+  <form id="formulario">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome">
+    <label for="email">Email:</label>
+    <input type="email" id="email">
+    <label for="telefone">Telefone:</label>
+    <input type="tel" id="telefone">
+    <input type="submit" value="Enviar">
+  </form>
+  <table id="tabela">
+    <thead>
+      <tr>
+        <th>Nome</th> <br>
+        <th>Email</th> 
+        <th>Telefone</th> 
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+  <script>
+    document.querySelector('#formulario').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var nome = document.querySelector('#nome').value;
+      var email = document.querySelector('#email').value;
+      var telefone = document.querySelector('#telefone').value;
+      var tabela = document.querySelector('#tabela');
+      var linha = tabela.insertRow();
+      var celulaproduto = linha.insertCell();
+      var celulapreco = linha.insertCell();
+      celulaNome.textContent = nome;
+      celulaEmail.textContent = email;
+      celulaTelefone.textContent = telefone;
+      document.querySelector('#nome').value = '';
+      document.querySelector('#email').value = '';
+      document.querySelector('#telefone').value = '';
+    });
+  </script>
+</body>
+</html>

@@ -223,7 +223,7 @@ a{
 .topo, .menu{
   height: 150px;
   overflow: hidden;
-  background: linear-gradient(to right, #85abd1, #fcfbfb);
+  background: linear-gradient(to right, #ffffff, #fcfbfb);
   width: 100%;
 }
 
@@ -291,7 +291,7 @@ a{
   flex-wrap: wrap;
 }
 .esquerda{
-  position: fixed;
+  position:fixed;
   top: 0;
   left: 0;
   width: 120px;
@@ -308,4 +308,43 @@ a{
 .creditos li{
   display: inline-block;
   margin: 0 10px;
+}
+input[type="number"] {
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  /* animation: alternate; */
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+th, td {
+  text-align: center;
+  padding: 8px;
+}
+
+th {
+  background-color: #333;
+  color: white;
+  
+}
+tr{
+  background-color: rgb(199, 191, 191);
+}
+tr:nth-child(even) {
+  background-color: #6d6767;
+}
+
+tr:hover {
+  background-color: #3ba5d6;
+}
+img {
+  width: 40%;
+
 }

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Pesca / Carretilha</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body onload="calcular()">
+  <div id="divBusca">
+    <input type="text" id="txtBusca" placeholder="Buscar...">
+   <a href="#">
+    <img src="lupa4 (1).png" alt="Buscar">
+   </a> 
+  </div>
+  
+  <div class="col12 topo">
+    <div class="topo1 col3">
+      <a href="http://127.0.0.1:5500/index.html"><img src="logo-removebg-preview.png"  alt="logo"></a>
+    </div>
+    <div class="topo2 col9">
+      <a href="http://127.0.0.1:5500/cadastroelogin.html"> 
+        <button class="circle-button">
+          <span>Login</span>
+        </button>
+      </a>
+    </div>
+  </div>
+<!-- <form id="formulario">
+  <label for="nome">Nome:</label>
+  <input type="text" id="nome">
+  <label for="preco">Preço:</label>
+  <input type="preco" id="preco">
+  <input type="submit">
+</form> -->
+<!-- <script>
+   document.querySelector('#formulario').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var nome = document.querySelector('#Produto').value;
+      var email = document.querySelector('#Preco').value;
+      var tabela = document.querySelector('#tabela');
+      var linha = tabela.insertRow();
+      var celulaNome = linha.insertCell();
+      var celulaEmail = linha.insertCell();
+      celulaNome.textContent = nome;
+      celulaEmail.textContent = email;
+      document.querySelector('#nome').value = '';
+      document.querySelector('#email').value = '';
+     
+    });
+</script> -->
+<div>  
+  
+  <table id="tabela">
+    <tr>
+      <th>Produto</th>
+      <th id = qtd>Quantidade</th>
+      <th id = preco>Preço</th>
+      <th> Total </th>
+    </tr>
+    <tr> 
+      <td><img src="kit.jpeg" alt=""> isca</td>
+      <td><input type="number" id="qtd1" value="1" min="1"></td>
+      <td id="preco1">10.00</td> 
+      <td id="valor1"></td>
+      <td><button class="excluirLinha">Excluir</button></td>
+      <!-- <td><button onclick="adicionarAoCarrinho(this.parentNode.parentNode)">Adicionar ao Carrinho</button></td> -->
+    </tr>
+    <tr>
+      <td><img src="molinete melhor.jpg" alt=""> molinete </td>
+      <td><input type="number" id="qtd2" value="1" min="1"></td>
+      <td id="preco2">250.00</td>
+      <td id="valor2"></td>
+      <td><button class="excluirLinha">Excluir</button></td>
+      <!-- <td><button onclick="adicionarAoCarrinho(this.parentNode.parentNode)">Adicionar ao Carrinho</button></td> -->
+    </tr>
+    <tr>
+      <td><img src="shopping.jpeg" alt=""> nome </td>
+      <td><input type="number" id="qtd3" value="1" min="1"></td>
+      <td id="preco3">100.00</td>
+      <td id="valor3"></td>
+      <td><button class="excluirLinha">Excluir</button></td>
+    </tr>
+    <tr>
+      <td><img src="carretilha.jpg" alt=""> carretilha</td>
+      <td><input type="number" id="qtd4" value="1" min="1"></td>
+      <td id="preco4">299.00</td>
+      <td id="valor4"></td>
+      <td><button class="excluirLinha">Excluir</button></td>
+    </tr>
+    <tr>
+      <td id="valorTotal"></td>
+    </tr>
+  </table>
+</div>
+<script>
+  function calcular(){ 
+    let p1 = parseFloat(document.getElementById("preco1").innerHTML)
+    let q1 = parseInt(document.getElementById("qtd1").value)
+    let v1 = document.getElementById("valor1")
+    v1.innerHTML = p1 * q1
+    document.getElementById("qtd1").addEventListener("change", calcular); 
+    // calculo 2
+    let p2 = parseFloat(document.getElementById("preco2").innerHTML)
+    let q2 = parseInt(document.getElementById("qtd2").value)
+    let v2 = document.getElementById("valor2")
+    v2.innerHTML = p2 * q2
+    document.getElementById("qtd2").addEventListener("change", calcular); 
+    // calculo3
+    let p3 = parseFloat(document.getElementById("preco3").innerHTML)
+    let q3 = parseInt(document.getElementById("qtd3").value)
+    let v3 = document.getElementById("valor3")
+    v3.innerHTML = p3 * q3
+    document.getElementById("qtd3").addEventListener("change", calcular);
+    // calculo4
+    let p4 = parseFloat(document.getElementById("preco4").innerHTML)
+    let q4 = parseInt(document.getElementById("qtd4").value)
+    let v4 = document.getElementById("valor4")
+    v4.innerHTML = p4 * q4
+    document.getElementById("qtd4").addEventListener("change", calcular); 
+    // valor total
+
+    let valorTotal = document.getElementById("valorTotal");
+
+    valorTotal.innerHTML = parseFloat(v1.textContent) + parseFloat(v2.textContent) + parseFloat(v3.textContent) + parseFloat(v4.textContent);
+    
+  }
+  {
+    botao.parentElement.parentElement.style.display // Obtém a linha pai do botão
+  }
+  // formulario adicionar
+ 
+</script>
+
+
+</body>
+</html>
